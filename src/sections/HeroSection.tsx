@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import Workstation3D from '../components/Workstation3D';
+import SkillToolkitSphere3D from '../components/SkillToolkitSphere3D';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 export default function HeroSection() {
@@ -255,16 +255,16 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: 3D DEVELOPER SEATED AT WORKSTATION (6 cols) */}
+        {/* RIGHT COLUMN: INTERACTIVE 3D TOOLKIT SPHERE (6 cols) */}
         <div className="hero-3d-scene lg:col-span-6 h-[480px] sm:h-[560px] lg:h-[620px] relative rounded-3xl bg-gradient-to-b from-slate-900/50 via-slate-900/30 to-slate-950/70 border border-white/[0.1] shadow-2xl overflow-hidden group backdrop-blur-md">
-          {/* Workstation Header HUD Tag */}
-          <div className="absolute top-4 left-4 z-10 font-mono text-[11px] text-cyan-400/90 tracking-widest uppercase flex items-center gap-2">
+          {/* Sphere Header HUD Tag */}
+          <div className="absolute top-4 left-4 z-10 font-mono text-[11px] text-cyan-400/90 tracking-widest uppercase flex items-center gap-2 pointer-events-none">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-            <span>3D Workspace // Active Developer Scene</span>
+            <span>02 // Skills &bull; My Toolkit 3D Sphere</span>
           </div>
 
-          {/* Render the 3D Workstation with Seated Working Developer */}
-          <Workstation3D className="w-full h-full" enableControls={true} />
+          {/* Render the 3D Toolkit Sphere */}
+          <SkillToolkitSphere3D className="w-full h-full" />
         </div>
       </div>
 
